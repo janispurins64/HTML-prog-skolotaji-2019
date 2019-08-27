@@ -31,11 +31,11 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pirmā diena
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="..views\Git.html">GIT un vēl..</a></li>
-                            <li><a href="..views\VSCode.html">VSCode ir derīgs</a></li>
-                            <li><a href="..views\AgileScrum.html">Agile/Scrum</a></li>
-                            <li ><a href="..views\HtmlTags.html">HTML tags</a></li>
-                            <li class="active"><a href="..views\CssSelektori.html">CSS Selektori</a></li>
+                            <li><a href="..\views\Git.html">GIT un vēl..</a></li>
+                            <li><a href="..\views\VSCode.html">VSCode ir derīgs</a></li>
+                            <li><a href="..\views\AgileScrum.html">Agile/Scrum</a></li>
+                            <li ><a href="..\views\HtmlTags.html">HTML tags</a></li>
+                            <li class="active"><a href="..\views\CssSelektori.html">CSS Selektori</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Plain JavaScript</a></li>
@@ -49,8 +49,25 @@
 
     <div id="wrap" class="margin-top">
         <div id="main"> 
-           <h1>CSS elementi</h1>
-          
+           <h1 class="text-center">CSS elementi</h1>
+           <ul id="CssSelectorList">
+                <li id="oddListItems">".class""- izmantojot "." tiek piekļūts klasei, kas pieejama lapā</li>
+                <li >".class1.class2" - piekļūst objektam lapā, kuram ir gan "class1", gan "class2", kā klase</li>
+                 <li id="oddListItems">".class1 .class2" - piekļūst objektiem "class2", kas ir elementa ar klasi "class1" pēcnācēji</li>
+                 <li >"#id" - izmantojot "#" tiek piekļūts elementam ar norādīto ID, kas ir pieejama lapā</li>
+                 <li id="oddListItems">"*" - izmantojot "*" var piekļūt visiem lapas elementiem</li>
+                 <li >"p" - piekļūst visiem "< p >" elementiem, kas ir lapā</li>
+                 <li id="oddListItems">"div,p" - piekļūst visiem "< div >" elemetiem un "< p >" elementiem, kas ir lapā</li>
+                 <li >"div p" - piekļūst visiem "< p >" elemetiem, kas ir iekš "< div >" elementa, kas ir lapā</li>
+                 <li id="oddListItems">"div>p" - piekļūst visiem "< p >" elemetiem, kuriem tiešais vecāka elements ir "< div >" </li>
+                 <li >"div+p" - piekļūst visiem "< p >" elemetiem, kuriem tiešais vecāka elements ir "< div >" </li>
+                 <li id="oddListItems">".not(p)" - atlasa visus elementus, kas nav "< p >" </li>
+                 <li >"p:first-child" - atlasa visus "< p >" elemetus, kas ir pirmie pēcnācēji vecāku elementam</li>
+                 <li id="oddListItems">"p:nth-child(2)" - atlasa visus "< p >" elemetus, kas ir otrie pēcnācēji vecāku elementam</li>
+                 <li id="hoverClass">"a:hover" - atlasa saiti, kad ar peli uzbrauc uz tās</li>
+            </ul>
+            <p>Ir vēl daudz un dažādi CSS selektori. Tos var apskatīt spiežot <a href="https://www.w3schools.com/cssref/css_selectors.asp">šeit.</a></p>
+            <p>Ja ir vēlme patestēt un paskatīties, kuri elementi tiek izvēlēti uz kuru CSS selektoru, tad spiediet <a href="https://www.w3schools.com/cssref/trysel.asp">šeit.</a></p>
         </div>
     </div>
 </body>
